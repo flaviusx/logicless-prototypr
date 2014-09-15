@@ -1,6 +1,6 @@
 {
     "name": "logicless-prototypr",
-    "version": "0.1",
+    "version": "0.1.0",
     "private": true,
     "dependencies": {
         "jquery": "~1.10.2",
