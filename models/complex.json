@@ -1,5 +1,6 @@
 {
-    "name": "Gorilla",
+    "title": "Complex article",
+    "text": "<p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.<\/p><p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.<\/p><p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.<\/p>",
     "address": {
         "streetName": "Broadway",
         "streetNumber": "721",
@@ -7,6 +8,12 @@
         "addressType": {
             "typeName": "residential"
         }
+    },
+    "cta": {
+        "links": [
+            { "href": "#", "title": "Link 1" },
+            { "href": "#", "title": "Link 2" }
+        ]
     },
     "layout": "layouts/main.hbs"
 }

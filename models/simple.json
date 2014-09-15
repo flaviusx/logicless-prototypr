@@ -1,10 +1,5 @@
 {
-    "name": "TEST",
-    "cta": {
-        "links": [
-            { "href": "#", "title": "Link 1" },
-            { "href": "#", "title": "Link 2" }
-        ]
-    },
+    "title": "Simple article",
+    "text": "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.",
     "layout": "layouts/main.hbs"
 }
