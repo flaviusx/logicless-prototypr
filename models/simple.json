@@ -1,0 +1,10 @@
+{
+    "name": "TEST",
+    "cta": {
+        "links": [
+            { "href": "#", "title": "Link 1" },
+            { "href": "#", "title": "Link 2" }
+        ]
+    },
+    "layout": "layouts/main.hbs"
+}

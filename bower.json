@@ -1,0 +1,25 @@
+{
+    "name": "logicless-prototypr",
+    "version": "0.1",
+    "private": true,
+    "dependencies": {
+        "jquery": "~1.10.2",
+        "underscore": "~1.5.2",
+        "bootstrap-sass-official": "~3.2.0"
+    },
+    "exportsOverride": {
+        "jquery": {
+            "../script/jquery": "jquery.js"
+        },
+        "underscore": {
+            "../script/underscore": "underscore.js"
+        },
+        "bootstrap-sass-official": {
+            "../script/bootstrap/js": "assets/javascripts/bootstrap/*.js",
+            "../sass": "assets/stylesheets/_bootstrap.scss",
+            "../sass/bootstrap": "assets/stylesheets/bootstrap/*.scss",
+            "../sass/bootstrap/mixins": "assets/stylesheets/bootstrap/mixins/*.scss",
+            "../fonts": "assets/fonts/bootstrap/**"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "LOREM IPSUM BLAH BLAH BLAH",
+     "cta": {
+        "links": [
+            { "href": "#", "title": "Link 1" },
+            { "href": "#", "title": "Link 2" }
+        ]
+    },
+    "layout": "layouts/second.hbs"
+}

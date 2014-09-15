@@ -1,0 +1,12 @@
+{
+    "name": "Gorilla",
+    "address": {
+        "streetName": "Broadway",
+        "streetNumber": "721",
+        "floor": 4,
+        "addressType": {
+            "typeName": "residential"
+        }
+    },
+    "layout": "layouts/main.hbs"
+}

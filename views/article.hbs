@@ -1,0 +1,47 @@
+<section class="col-md-8 col-sm-12">
+    <article class="article" id="article" role="article" tabindex="-2">
+        <header>
+            <h1 class="title">{{title}}</h1>
+
+            <figure class="lead-image">
+				<img data-src="{{leadimg.src}}" alt="{{leadimg.alt}}" />
+				<noscript>
+				    <img src="{{leadimg.src}}" alt="{{leadimg.alt}}" />
+				</noscript>
+				<figcaption class="lead-image-caption">{{leadimg.caption}}</figcaption>
+				<span class="credit">Source by: Dave Smith, Johns brother</span>						
+            </figure>
+        </header>
+
+        <cite class="byline" role="byline">
+            <img class="byline-image" alt="{{byline.img.alt}}" data-src="{{byline.img.src}}">
+            <h6 class="byline-name">{{byline.name}}</h6>
+            <time class="pubdate" datetime="2014-08-10">{{byline.pubdate}}</time>
+            <time class="updated" datetime="2014-08-12">{{byline.updated}}</time>					
+        </cite>
+		
+        {{#each content}}
+        {{{content}}}
+        {{/each}}
+        
+        <div class="article-video">
+            <iframe width="420" height="315" src="//www.youtube.com/embed/C0DPdy98e4c" frameborder="0" allowfullscreen></iframe>
+        </div>
+    
+        <blockquote class="blockquote twitter-tweet" data-conversation="none">
+            <h3>Twitter tweet embedded</h3>
+            <iframe height="465" frameborder="0" id="twitter-widget-2" scrolling="no" allowtransparency="true" class="twitter-tweet twitter-tweet-rendered" style="display: block; max-width: 99%; min-width: 220px; padding: 0px; border-radius: 5px; margin: 7px auto; border-width: 1px; border-style: solid; border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); position: static; visibility: visible; width: 500px; float: none;" title="Embedded Tweet"></iframe>
+        </blockquote>
+
+
+        <blockquote class="blockquote"><span>&ldquo;</span> Blockquote area here <span>&rdquo;</span></blockquote>
+
+
+        <figure class="article-image flag-ugc">
+            <img data-src="http://www.scotsman.com/webimage/1.3510011.1408027636!/image/3538781525.jpg_gen/derivatives/articleImgDeriv_628px/3538781525.jpg" alt="Independence: more alt text" />
+            <figcaption class="credit">Blurb of a figcaption here</figcaption>
+            <span class="credit">Source by: John Smith</span>					
+        </figure>
+
+    </article>
+</section><!-- // end section -->
