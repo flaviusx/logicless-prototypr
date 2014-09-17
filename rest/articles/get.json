@@ -1,0 +1,14 @@
+{
+    "articles": [
+        { 
+            "id": "1",
+            "title": "A",
+            "content": "a@a.com"
+        },
+        { 
+            "id": "2",            
+            "title": "B",
+            "content": "b@b.com"
+        }
+    ]
+}
