@@ -5,7 +5,8 @@
     "dependencies": {
         "jquery": "~1.10.2",
         "underscore": "~1.5.2",
-        "bootstrap-sass-official": "~3.2.0"
+        "bootstrap-sass-official": "~3.2.0",
+        "handlebars": "~2.0.0"
     },
     "exportsOverride": {
         "jquery": {
@@ -20,6 +21,9 @@
             "../sass/bootstrap": "assets/stylesheets/bootstrap/*.scss",
             "../sass/bootstrap/mixins": "assets/stylesheets/bootstrap/mixins/*.scss",
             "../fonts": "assets/fonts/bootstrap/**"
+        },
+        "handlebars": {
+            "../script/handlebars": "handlebars.js"
         }
     }
 }

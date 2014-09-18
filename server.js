@@ -80,4 +80,6 @@ glob("*", {'cwd': 'rest'}, function (er, files) {
     });
 });
 
+glob("*", {'cwd': '.'}, function(){});
+
 app.listen(3000);
