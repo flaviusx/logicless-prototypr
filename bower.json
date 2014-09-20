@@ -6,7 +6,8 @@
         "jquery": "~1.10.2",
         "underscore": "~1.5.2",
         "bootstrap-sass-official": "~3.2.0",
-        "handlebars": "~2.0.0"
+        "handlebars": "~2.0.0",
+        "requirejs": "~2.1.15"
     },
     "exportsOverride": {
         "jquery": {
@@ -24,6 +25,9 @@
         },
         "handlebars": {
             "../script/handlebars": "handlebars.js"
+        },
+        "requirejs": {
+            "../script/requirejs": "require.js"
         }
     }
 }

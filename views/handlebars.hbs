@@ -10,22 +10,7 @@
             <p>\{{content}}</p>
         </article>
     </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            var tpl = Handlebars.compile($("#article-template").html());
-            $.ajax({
-                url: "rest/articles",
-                type: "GET",
-                success: function(data){
-                    var articles = data["articles"];
-                    $.each(articles, function(i, article){
-                        var html = tpl(article);
-                        $("#articles").append(html);
-                    });                    
-                }
-            });
-        });
-    </script>
     <footer>
     </footer>
 </section>
+<script src="assets/script/app/handlebars.js"></script>
