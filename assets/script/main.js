@@ -15,7 +15,16 @@ requirejs.config({
         }
     }
 });
-require(['jquery', 'bootstrap'], function ($) {
-}, function (err) {
-    console.log(err);
-});
+
+;(function(){
+    NodeList.prototype.forEach = Array.prototype.forEach; 
+    HTMLCollection.prototype.forEach = Array.prototype.forEach;
+
+    var scripts = document.querySelectorAll("script[data-src]");
+    scripts.forEach(function(element, index){
+        var js = element.getAttribute('data-src');
+        require([js], function(){}, function(err){
+            console.log("Error loading module: " + js);
+        });
+    });
+}());

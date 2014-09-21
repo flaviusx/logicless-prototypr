@@ -2,13 +2,33 @@
     "articles": [
         { 
             "id": "1",
-            "title": "A",
-            "content": "a@a.com"
+            "title": "HTML",
+            "content": "HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website."
         },
         { 
             "id": "2",            
-            "title": "B",
-            "content": "b@b.com"
+            "title": "CSS",
+            "content": "CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document."
+        },
+        {
+            "id": "3",
+            "title": "Bootstrap",
+            "content": "Twitter Bootstrap is a powerful front-end framework for faster and easier web development. The Twitter Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts."
+        },
+        {
+            "id": "4",
+            "title": "References",
+            "content": "The references section outlines all the standard HTML tags and CSS properties along with other useful references such as color names and values, symbols and character entities, web safe fonts, language codes, HTTP messages and much more."
+        },
+        {
+            "id": "5",
+            "title": "Examples",
+            "content": "The examples section encloses an extensive collection of examples on various topic that you can try and test yourself using online HTML editor."
+        },
+        {
+            "id": "6",
+            "title": "FAQ",
+            "content": "The collection of Frequently Asked Questions (FAQ) provides brief answers to many common questions related to web design and development."
         }
     ]
 }

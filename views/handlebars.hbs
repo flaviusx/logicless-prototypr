@@ -1,16 +1,19 @@
-<section>
-    <header>
-        <h1>REST test</h1>
-    </header>
-    <div id="articles">
+<section class="container">
+    <div class="jumbotron">
+        <h1>Responsive layout with bootstrap and require</h1>
+        <p>In today's world internet is the most popular way of connecting with the people. At <a href="http://www.tutorialrepublic.com" target="_blank">tutorialrepublic.com</a> you will learn the essential of web development technologies along with real life practice example, so that you can create your own website to connect with the people around the world.</p>
+        <p><a href="http://www.tutorialrepublic.com" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+    </div>
+    <div id="articles" class="row">
     </div>
     <script id="article-template" type="text/x-handlebars-template">
-        <article>
+        <article class="col-sm-6 col-md-4 col-lg-2">
             <h1>\{{title}}</h1>
             <p>\{{content}}</p>
+            <p><a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
         </article>
     </script>
     <footer>
     </footer>
 </section>
-<script src="assets/script/app/handlebars.js"></script>
+<script data-src="assets/script/app/handlebars.js"></script>
