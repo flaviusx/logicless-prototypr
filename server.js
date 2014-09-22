@@ -13,6 +13,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/base'));
 
 app.get('/', function(req, res){
     var json = 'models/index.json';
@@ -82,4 +83,4 @@ glob("*", {'cwd': 'rest'}, function (er, files) {
 
 glob("*", {'cwd': '.'}, function(){});
 
-app.listen(3000);
+app.listen(80);
