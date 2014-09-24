@@ -15,5 +15,5 @@
             { "href": "#", "title": "Link 2" }
         ]
     },
-    "layout": "layouts/main.hbs"
+    "layout": "layouts/second.hbs"
 }

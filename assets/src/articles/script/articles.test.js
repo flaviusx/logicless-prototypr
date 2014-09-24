@@ -1,4 +1,4 @@
-define(['assets/script/app/handlebars', 'jquery', 'handlebars'], function(App, $, Handlebars) {
+define(['../script/articles', 'jquery', 'handlebars'], function(App, $, Handlebars) {
 describe('Articles REST', function() {
   // Use Sinon to replace jQuery's ajax method
     // with a spy.

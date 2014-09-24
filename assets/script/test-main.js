@@ -6,11 +6,15 @@ var pathToModule = function(path) {
 };
 
 Object.keys(window.__karma__.files).forEach(function(file) {
+  console.log(pathToModule(file));
   if (TEST_REGEXP.test(file)) {
     // Normalize paths to RequireJS module names.
     allTestFiles.push(pathToModule(file));
   }
 });
+
+console.log("test files");
+console.log(allTestFiles);
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
@@ -20,7 +24,7 @@ require.config({
   paths: {
     'jquery': 'assets/script/jquery/jquery',
     'underscore': 'assets/script/underscore/underscore',
-      'handlebars': 'assets/script/handlebars/handlebars',
+    'handlebars': 'assets/script/handlebars/handlebars',
   },
 
   shim: {
