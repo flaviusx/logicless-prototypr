@@ -28,7 +28,7 @@ app.get('/', function(req, res){
 glob("*.hbs", {'cwd': 'views'}, function (er, files) {
     files.forEach(function(file){
         var view = file.replace(".hbs", "");
-        console.log("registering route /" + view);
+        console.log("Registering route /" + view);
         app.get('/'+view, function(req, res){
             var json = 'models/'+view+'.json';
             if(req.query.json) {
@@ -41,11 +41,37 @@ glob("*.hbs", {'cwd': 'views'}, function (er, files) {
     });  
 });
 
+glob("*", {'cwd': 'views'}, function (er, files) {
+    files.filter(function (file) {
+        return fs.statSync(__dirname +'/views/'+ file).isDirectory();
+    }).forEach(function(file){
+        console.log("Traversing " + file);
+        var route = file;
+        if(file != "layouts" && file != "partials") {
+            glob("*.hbs", {'cwd': 'views/' + route }, function (er, files) {
+                files.forEach(function(file){
+                    var view = file.replace(".hbs", "");
+                    console.log("Registering route /" + route + '/' + view);
+                    app.get('/'+route+'/'+view, function(req, res){
+                        var json = 'models/'+ route + '/' +view+'.json';
+                        if(req.query.json) {
+                            json = 'models/' + route + '/' + req.query.json;
+                        }
+                        fs.readFile(json, 'utf-8', function(err, data){
+                            res.render(route + '/' + view, JSON.parse(data));
+                        });
+                    });
+                });
+            });
+        }        
+    });  
+});
+
 glob("*", {'cwd': 'rest'}, function (er, files) {
     files.filter(function (file) {
         return fs.statSync(__dirname +'/rest/'+ file).isDirectory();
     }).forEach(function(dirname){
-        console.log("registering rest service /rest/" + dirname)
+        console.log("Registering rest service /rest/" + dirname)
         app.get('/rest/'+dirname, function(req, res) {
             var json = 'rest/'+dirname+'/get.json';   
             fs.readFile(json, 'utf-8', function(err, data){
@@ -83,4 +109,4 @@ glob("*", {'cwd': 'rest'}, function (er, files) {
 
 glob("*", {'cwd': '.'}, function(){});
 
-app.listen(80);
+app.listen(3000);
