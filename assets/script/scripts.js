@@ -1,15 +1,16 @@
+/*!
+ * scripts.js
+ *
+ * Helper script to load <script data-src> scripts after window load event
+ * 
+ * Copyright (C) 2014 Flavius Olaru
+ * MIT Licensed
+ */
 ;(function(){
     NodeList.prototype.forEach = Array.prototype.forEach; 
     HTMLCollection.prototype.forEach = Array.prototype.forEach;
     
     document.write = function(s){
-        /*
-        postscribe(document.currentScript.parentElement, s, {
-            done: function(){
-                console.log("Done: " + s);
-            }
-        });*/
-        //console.log(s);
         var fragment = document.createElement('div'); 
         fragment.innerHTML = s;
         fragment.childNodes.forEach(function(element, index){
@@ -39,23 +40,18 @@
             var scripts = document.querySelectorAll("code");
             scripts.forEach(function(element, index){
                 if(element.childNodes[0]) {
-                var script = element.childNodes[0].textContent;
-                if(script != "") {
-                    try {
-                        var scriptEl = document.createElement("script"); 
-                        scriptEl.innerHTML = script;
-                        var wrapperEl = document.createElement("div");
-                        element.parentElement.insertBefore(wrapperEl, element);
-                        //console.log(script);
-                        wrapperEl.appendChild(scriptEl);
-                        //console.log(document.body);
-                   // console.log(element.parentNode);
-                    //element.parentNode.insertBefore(scriptEl, element);
-                    //document.body.appendChild(scriptEl);
-                    } catch (err) {
-                        console.log(err);
+                    var script = element.childNodes[0].textContent;
+                    if(script != "") {
+                        try {
+                            var scriptEl = document.createElement("script"); 
+                            scriptEl.innerHTML = script;
+                            var wrapperEl = document.createElement("div");
+                            element.parentElement.insertBefore(wrapperEl, element);
+                            wrapperEl.appendChild(scriptEl);
+                        } catch (err) {
+                            console.log(err);
+                        }
                     }
-                }
                 }
             });
         }

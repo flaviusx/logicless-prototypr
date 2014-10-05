@@ -12,7 +12,16 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            dev: ['assets/script/bootstrap.js', 'assets/css/bootstrap.css'],
+            dev: [
+                'assets/css/**/*.css',
+                'assets/fonts/**',
+                'assets/sass/**',
+                'assets/script/bootstrap/**',
+                'assets/script/handlebars/**',
+                'assets/script/jquery/**',
+                'assets/script/requirejs/**',
+                'assets/script/underscore/**'
+            ],
             prod: ['assets/script/*.min.js', 'assets/css/*.min.css']
         },
         browserify: {
@@ -36,6 +45,11 @@ module.exports = function(grunt) {
                 files: [{
                     "assets/css/bootstrap/bootstrap.css": "assets/sass/bootstrap.scss"
                 }]
+            }
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
             }
         },
         cssmin: {
@@ -89,8 +103,13 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['assets/script/*.js', 'assets/script/bootstrap/*.js', 'assets/sass/**'],
-                tasks: ['clean:dev', 'clean:prod', 'browserify:bootstrap', 'sass']
+                files: [
+                    'assets/script/*.js', 
+                    'assets/script/bootstrap/*.js', 
+                    'assets/sass/**', 
+                    'assets/source/**/sass/__*.scss'
+                ],
+                tasks: ['clean:dev', 'clean:prod', 'browserify:bootstrap', 'sass', 'karma']
             },
         }        
     });
@@ -106,11 +125,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('init:dev', ['bower:install', 'rename:bootstrapsass']);
     
     grunt.registerTask('build:validate', ['clean:prod', 'browserify:bootstrap', 'sass', 'jshint', 'csslint:strict']);
     
-    grunt.registerTask('build:dev', ['clean:prod', 'browserify:bootstrap', 'sass']);
+    grunt.registerTask('build:dev', ['clean:prod', 'browserify:bootstrap', 'sass', 'karma']);
     grunt.registerTask('build:prod', ['clean:prod', 'browserify:bootstrap', 'sass', 'cssmin', 'uglify']);
 };

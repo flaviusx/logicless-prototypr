@@ -1,13 +1,14 @@
 {
   "name": "logicless-prototypr",
-  "version": "0.1.0",
-  "description": "Logicless Prototypr - logic-less ui prototyping",
+  "version": "0.2.0",
+  "description": "Logicless Prototypr - UI/UX prototyping with just presentation logic",
   "dependencies": {
-    "express": ">= 3.4.0",
-    "express3-handlebars": ">= 0.5.0",
-    "hbs": ">= 2.7.0",
-    "glob": "*",
-    "underscore": "*"
+    "express": "~4.9.5",
+    "express-handlebars": "~1.1.0",
+    "glob": "~4.0.6",
+    "underscore": "~1.7.0",
+    "watchr": "~2.4.11",
+    "lorem-hipsum": "~0.1.2"
   },
   "devDependencies": {
     "bower": "~1.3.10",
@@ -24,8 +25,10 @@
     "grunt-contrib-rename": "~0.0.3",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
+    "node-sass": "~0.9.5-rc1",
     "grunt-sass": "~0.14.1",
     "karma": "~0.12.23",
+    "grunt-karma": "~0.9.0",
     "karma-chai-plugins": "~0.2.3",
     "phantomjs": "~1.9.9",
     "karma-phantomjs-launcher": "~0.1.4",
@@ -39,9 +42,8 @@
     "karma-requirejs": "~0.2.2",
     "sinon": "~1.10.3",
     "karma-sinon": "~1.0.3",
-    "load-grunt-tasks": "~0.2.0",
-    "node-sass": "~0.9.5-rc1",
+    "load-grunt-tasks": "~0.2.0",    
     "time-grunt": "~0.2.3"
   },
-  "engine": "node >=0.6.x"
+  "engine": "node >=0.10.x"
 }

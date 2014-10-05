@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logicless main layout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <style>
+        /* Small devices (tablets, 768px and up) */
+        @media (min-width: 768px) { 
+            div[class^="col"]{padding-left:3px; padding-right:3px;}
+        }
+
+        /* Medium devices (desktops, 992px and up) */
+        @media (min-width: 992px) {   
+            div[class^="col"]{padding-left:3px; padding-right:3px;}
+            .container{padding-left:0px; padding-right:0px; width: 992px;}
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        /* Large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {   
+            /*default so you don't need this*/
+            div[class^="col"]{padding-left:3px; padding-right:3px;}
+            .container{padding-left:0px; padding-right:0px; width: 1200px;}
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+    
+    <script async src="assets/script/jquery/jquery.js"></script>
+    <script async src="assets/script/underscore/underscore.js"></script>    
+    <script async data-main="assets/script/require.config" src="assets/script/requirejs/require.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+            
+    <div class="wrapper container">
+        <div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Company Info</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home Page</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Social</a></li>
+        </ul>
+    </div>    
+        <main role="main" class="main">
+           {{{body}}}
+        </main>
+    </div>
+    
+</body>
+</html>

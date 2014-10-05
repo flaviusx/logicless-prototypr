@@ -1,5 +1,0 @@
-{
-    "title": "$title",
-    "text": "$text",
-    "layout": "layouts/code.hbs"
-}

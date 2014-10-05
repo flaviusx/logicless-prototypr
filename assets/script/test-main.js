@@ -1,3 +1,11 @@
+/*!
+ * test-main.js
+ *
+ * Main test configuration script for karma
+ * 
+ * Copyright (C) 2014 Flavius Olaru
+ * MIT Licensed
+ */
 var allTestFiles = [];
 var TEST_REGEXP = /test\.js$/;
 
@@ -6,15 +14,11 @@ var pathToModule = function(path) {
 };
 
 Object.keys(window.__karma__.files).forEach(function(file) {
-  console.log(pathToModule(file));
   if (TEST_REGEXP.test(file)) {
     // Normalize paths to RequireJS module names.
     allTestFiles.push(pathToModule(file));
   }
 });
-
-console.log("test files");
-console.log(allTestFiles);
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file

@@ -1,4 +1,13 @@
-define(['../script/articles', 'jquery', 'handlebars'], function(App, $, Handlebars) {
+/*!
+ * articles.test.js
+ *
+ * Articles page test script with requirejs and mocha
+ * 
+ * Copyright (C) 2014 Flavius Olaru
+ * MIT Licensed
+ */
+define(['../articles', 'jquery', 'handlebars'], function(App, $, Handlebars) {
+
 describe('Articles REST', function() {
   // Use Sinon to replace jQuery's ajax method
     // with a spy.
@@ -19,7 +28,7 @@ describe('Articles REST', function() {
     });
     it('should make an ajax call', function(done) {    
         var app = new Articles($("<div></div>"), "<title>{{title}}</title>");
-        app.fetch("http://localhost/rest/articles").done();
+        app.fetch("http://localhost:3000/rest/articles").done();
         expect($.ajax.calledOnce).to.be.false; // see if the spy WASN'T called
         done(); // let Mocha know we're done async testing
     });
@@ -31,4 +40,5 @@ describe('Articles REST', function() {
         done();
     });
 });
+
 });

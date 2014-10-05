@@ -1,5 +1,12 @@
-//Filename: boilerplate.js
-require([
+/*!
+ * articles.js
+ *
+ * Articles page script with requirejs
+ * 
+ * Copyright (C) 2014 Flavius Olaru
+ * MIT Licensed
+ */
+define([
     'jquery',
     'handlebars'
 ], function($, Handlebars){
@@ -22,10 +29,12 @@ require([
         });
     };
     $(document).ready(function(){
-        var articlesApp = new Articles($("#articles"), $("#article-template").html());
-        var articlesReq = articlesApp.fetch("http://localhost/rest/articles")
-        articlesReq.done(articlesApp.render.bind(articlesApp));
-    });
+        if($("#articles").length == 1 && $("#article-template").html() != "") {
+            var articlesApp = new Articles($("#articles"), $("#article-template").html());
+            var articlesReq = articlesApp.fetch("http://localhost:3000/rest/articles")
+            articlesReq.done(articlesApp.render.bind(articlesApp));
+        }
+    });    
 }, function (err) {
     throw(err);
 });
