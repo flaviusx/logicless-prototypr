@@ -1,0 +1,15 @@
+/bower_components
+/coverage
+/node_modules
+/assets/css/bootstrap
+/assets/fonts/glyphicons-halflings-regular.eot
+/assets/fonts/glyphicons-halflings-regular.svg
+/assets/fonts/glyphicons-halflings-regular.ttf
+/assets/fonts/glyphicons-halflings-regular.woff
+/assets/sass/bootstrap
+/assets/sass/bootstrap.scss
+/assets/script/bootstrap
+/assets/script/handlebars
+/assets/script/jquery
+/assets/script/requirejs
+/assets/script/underscore
