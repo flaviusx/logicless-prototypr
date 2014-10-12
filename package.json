@@ -45,5 +45,9 @@
     "load-grunt-tasks": "~0.2.0",    
     "time-grunt": "~0.2.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flaviusx/logicless-prototypr.git"
+  },
   "engine": "node >=0.10.x"
 }
