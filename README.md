@@ -10,19 +10,33 @@ TO install:
 1. Install nodejs
 2. Git clone logicless-prototypr
 3. Install node packages:
+
     npm install
+
 3. Install bower packages:
+
     bower install
-3.1 If error then try to install bower globally:
+
+* If error then try to install bower globally:
+
     npm install -g bower
+
 4. Run grunt job to initialize project:
+
     grunt init:dev
-4.1 If error then try to install grunt globally:
+
+* If error then try to install grunt globally:
+
     npm install -g grunt-cli
+
 5. Run grunt job to compile resources:
+
     build:dev
+
 6. Start node server:
+
    node server.js
+
    
 Open browser at: http://localhost:3000/simple or http://localhost:3000/article or any name from views folder
   
